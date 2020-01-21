@@ -4,6 +4,6 @@ namespace DenizTezcan\SendCloud\Http;
 
 use Exception;
 
-class SendCloudApiException extends Exception {
-
+class SendCloudApiException extends Exception
+{
 }

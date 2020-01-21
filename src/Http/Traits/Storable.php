@@ -4,7 +4,7 @@ namespace DenizTezcan\SendCloud\Http\Traits;
 
 trait Storable
 {
-	public function save()
+    public function save()
     {
         if ($this->exists()) {
             $this->fill($this->update());
@@ -22,12 +22,11 @@ trait Storable
 
     public function update()
     {
-        return $this->connection()->put($this->url . '/' . urlencode($this->id), $this->json());
+        return $this->connection()->put($this->url.'/'.urlencode($this->id), $this->json());
     }
 
     public function delete()
     {
-        return $this->connection()->delete($this->url . '/' . urlencode($this->id));
+        return $this->connection()->delete($this->url.'/'.urlencode($this->id));
     }
-    
 }

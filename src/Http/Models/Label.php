@@ -6,11 +6,10 @@ use DenizTezcan\SendCloud\Http\Traits\FindOne;
 
 class Label extends Model
 {
-
     use FindOne;
 
     protected $fillable = [
-    	'normal_printer',
+        'normal_printer',
         'label_printer',
     ];
 
@@ -18,7 +17,7 @@ class Label extends Model
 
     protected $namespaces = [
         'singular' => 'label',
-        'plural' => 'labels'
+        'plural'   => 'labels',
     ];
 
     /**

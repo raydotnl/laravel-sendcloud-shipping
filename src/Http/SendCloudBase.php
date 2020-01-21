@@ -2,11 +2,13 @@
 
 namespace DenizTezcan\SendCloud\Http;
 
-use DenizTezcan\SendCloud\Http\Models\{Label, Parcel, ShippingMethod};
+use DenizTezcan\SendCloud\Http\Models\Label;
+use DenizTezcan\SendCloud\Http\Models\Parcel;
+use DenizTezcan\SendCloud\Http\Models\ShippingMethod;
 
 class SendCloudBase
 {
-	protected $connection;
+    protected $connection;
 
     public function __construct(Connection $connection)
     {

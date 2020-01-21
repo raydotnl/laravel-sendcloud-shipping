@@ -4,7 +4,7 @@ namespace DenizTezcan\SendCloud\Http\Traits;
 
 trait FindAll
 {
-	public function all($params = [])
+    public function all($params = [])
     {
         $result = $this->connection()->get($this->url, $params);
 
