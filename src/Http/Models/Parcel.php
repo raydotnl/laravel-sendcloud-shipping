@@ -2,7 +2,9 @@
 
 namespace DenizTezcan\SendCloud\Http\Models;
 
-use DenizTezcan\SendCloud\Http\Traits\{Findable, Storable, Multiple};
+use DenizTezcan\SendCloud\Http\Traits\Findable;
+use DenizTezcan\SendCloud\Http\Traits\Multiple;
+use DenizTezcan\SendCloud\Http\Traits\Storable;
 
 class Parcel extends Model
 {
