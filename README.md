@@ -1,4 +1,8 @@
 # Laravel Sendcloud (shipping) API
+[![Latest Stable Version](https://poser.pugx.org/deniztezcan/laravel-sendcloud-shipping/v/stable)](https://packagist.org/packages/deniztezcan/laravel-sendcloud-shipping) 
+[![Total Downloads](https://poser.pugx.org/deniztezcan/laravel-sendcloud-shipping/downloads)](https://packagist.org/packages/deniztezcan/laravel-sendcloud-shipping) 
+[![Latest Unstable Version](https://poser.pugx.org/deniztezcan/laravel-sendcloud-shipping/v/unstable)](https://packagist.org/packages/deniztezcan/laravel-sendcloud-shipping) 
+[![License](https://poser.pugx.org/deniztezcan/laravel-sendcloud-shipping/license)](https://packagist.org/packages/deniztezcan/laravel-sendcloud-shipping)
 A Laravel Wrapper for the SendCloud Shipping API based on the `picqer/sendcloud-php-client` package.
 
 ### Instalation
