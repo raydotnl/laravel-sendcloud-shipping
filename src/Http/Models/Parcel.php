@@ -2,13 +2,13 @@
 
 namespace DenizTezcan\SendCloud\Http\Models;
 
-use DenizTezcan\SendCloud\Http\Traits\Findable;
-use DenizTezcan\SendCloud\Http\Traits\Storable;
+use DenizTezcan\SendCloud\Http\Traits\{Findable, Storable, Multiple};
 
 class Parcel extends Model
 {
     use Findable;
     use Storable;
+    use Multiple;
 
     protected $fillable = [
         'id',
