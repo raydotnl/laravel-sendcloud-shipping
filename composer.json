@@ -25,7 +25,7 @@
           "DenizTezcan\\SendCloud\\SendCloudServiceProvider"
         ],
         "aliases": {
-          "PostNLAPI": "DenizTezcan\\SendCloud\\Facades\\SendCloud"
+          "SendCloud": "DenizTezcan\\SendCloud\\Facades\\SendCloud"
         }
       }
     }
