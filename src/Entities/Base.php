@@ -4,7 +4,7 @@ namespace DenizTezcan\SendCloud\Entities;
 
 class Base
 {
-	protected $attributes = [];
+    protected $attributes = [];
 
     public function __construct($attributes = [])
     {
@@ -13,18 +13,17 @@ class Base
         }
     }
 
-	public function set($key = "", $value = "")
+    public function set($key = '', $value = '')
     {
-    	$this->attributes[$key] = $value;
+        $this->attributes[$key] = $value;
     }
 
-    public function get($key = "")
+    public function get($key = '')
     {
-    	if(isset($this->attributes[$key])){
-    		return $this->attributes[$key];
-    	}
+        if (isset($this->attributes[$key])) {
+            return $this->attributes[$key];
+        }
 
-    	return null;
+        return null;
     }
-
 }

@@ -2,7 +2,7 @@
 
 return [
     'api'		=> [
-        'key'		=> '',
+        'key'		     => '',
         'secret'    => '',
     ],
 ];

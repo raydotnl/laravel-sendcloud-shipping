@@ -6,7 +6,7 @@ use DenizTezcan\SendCloud\Http\Connection;
 
 abstract class Model
 {
-	/**
+    /**
      * @var Connection
      */
     protected $connection;
@@ -36,7 +36,7 @@ abstract class Model
      */
     protected $namespaces = [
         'singular' => '',
-        'plural' => ''
+        'plural'   => '',
     ];
 
     public function __construct(Connection $connection, array $attributes = [])
@@ -46,7 +46,7 @@ abstract class Model
     }
 
     /**
-     * Get the connection instance
+     * Get the connection instance.
      *
      * @return Connection
      */
@@ -56,7 +56,7 @@ abstract class Model
     }
 
     /**
-     * Get the model's attributes
+     * Get the model's attributes.
      *
      * @return array
      */
@@ -66,14 +66,15 @@ abstract class Model
     }
 
     /**
-     * Fill the entity from an array
+     * Fill the entity from an array.
      *
      * @param array $attributes
      */
     protected function fill(array $attributes)
     {
-        if (array_key_exists($this->namespaces['singular'], $attributes))
+        if (array_key_exists($this->namespaces['singular'], $attributes)) {
             $attributes = $attributes[$this->namespaces['singular']];
+        }
 
         foreach ($this->fillableFromArray($attributes) as $key => $value) {
             if ($this->isFillable($key)) {
@@ -83,9 +84,10 @@ abstract class Model
     }
 
     /**
-     * Get the fillable attributes of an array
+     * Get the fillable attributes of an array.
      *
      * @param array $attributes
+     *
      * @return array
      */
     protected function fillableFromArray(array $attributes)
@@ -125,20 +127,23 @@ abstract class Model
 
     public function exists()
     {
-        if ( ! in_array($this->primaryKey, $this->attributes)) return false;
+        if (!in_array($this->primaryKey, $this->attributes)) {
+            return false;
+        }
 
-        return ! empty($this->attributes[$this->primaryKey]);
+        return !empty($this->attributes[$this->primaryKey]);
     }
 
     public function json()
     {
         $json = [];
         $json[$this->namespaces['singular']] = $this->attributes;
+
         return json_encode($json);
     }
 
     /**
-     * Make var_dump and print_r look pretty
+     * Make var_dump and print_r look pretty.
      *
      * @return array
      */
@@ -148,6 +153,7 @@ abstract class Model
         foreach ($this->fillable as $attribute) {
             $result[$attribute] = $this->$attribute;
         }
+
         return $result;
     }
 }

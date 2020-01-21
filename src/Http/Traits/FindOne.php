@@ -4,11 +4,11 @@ namespace DenizTezcan\SendCloud\Http\Traits;
 
 trait FindOne
 {
-	public function find($id)
+    public function find($id)
     {
-        $result = $this->connection()->get($this->url . '/' . urlencode($id));
+        $result = $this->connection()->get($this->url.'/'.urlencode($id));
 
-        if ( ! array_key_exists($this->namespaces['singular'], $result)) {
+        if (!array_key_exists($this->namespaces['singular'], $result)) {
             return null;
         }
 
