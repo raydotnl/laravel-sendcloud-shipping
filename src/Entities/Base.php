@@ -15,7 +15,7 @@ class Base
 
 	public function set($key = "", $value = "")
     {
-    	$this->attributes[$key] = "";
+    	$this->attributes[$key] = $value;
     }
 
     public function get($key = "")

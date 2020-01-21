@@ -2,9 +2,9 @@
 
 namespace DenizTezcan\SendCloud;
 
-use Picqer\Carriers\SendCloud\Connection;
-use Picqer\Carriers\SendCloud\SendCloud as SendCloudBase;
-use Picqer\Carriers\SendCloud\SendCloudApiException;
+use DenizTezcan\SendCloud\Http\Connection;
+use DenizTezcan\SendCloud\Http\SendCloudBase;
+use DenizTezcan\SendCloud\Http\SendCloudApiException;
 use DenizTezcan\SendCloud\Entities\Customer;
 use Exception;
 
@@ -15,7 +15,7 @@ class SendCloud
 
 	public function __construct()
 	{
-		if($api === null){
+		if($this->api === null){
 			$this->api = new SendCloudBase(new Connection(config('shipping-sendcloud.api.key'), config('shipping-sendcloud.api.secret')));
 		}
 	}
@@ -45,10 +45,22 @@ class SendCloud
 
 		try {
 		    $parcel->save();
+		    return $parcel;
 		} catch (SendCloudApiException $e) {
 		    throw new Exception($e->getMessage());
 		}
 
+	}
+
+	public function getPDFFromSingleParcel($parcel)
+	{
+		$label = $this->api->labels();
+		$label->normal_printer 	= $parcel->label["normal_printer"];
+		$label->label_printer 	= $parcel->label["label_printer"];
+
+		header("Content-type: application/pdf");
+		echo $label->labelPrinterContent();
+		exit;
 	}
 
 }
