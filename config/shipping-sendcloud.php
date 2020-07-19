@@ -2,7 +2,7 @@
 
 return [
     'api'		=> [
-        'key'		     => '',
-        'secret'    => '',
+        'key'		=> env('SENDCLOUD_KEY'),
+        'secret'    => env('SENDCLOUD_SECRET'),
     ],
 ];
