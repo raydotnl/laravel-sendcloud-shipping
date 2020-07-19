@@ -1,5 +1,5 @@
 {
-    "name": "deniztezcan/laravel-sendcloud-shipping",
+    "name": "raydotnl/laravel-sendcloud-shipping",
     "description": "Laravel Wrapper for the SendCloud Shipping API",
     "type": "library",
     "license": "MIT",
