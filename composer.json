@@ -3,8 +3,8 @@
     "description": "Laravel Wrapper for the SendCloud Shipping API",
     "type": "library",
     "license": "MIT",
-    "version": "0.2.0",
-    "homepage": "https://github.com/deniztezcan/laravel-sendcloud-shipping",
+    "version": "0.3.0",
+    "homepage": "https://github.com/raydotnl/laravel-sendcloud-shipping",
     "authors": [
         {
             "name": "Deniz Tezcan",
@@ -13,6 +13,10 @@
         {
             "name": "Stephan Groen",
             "email": "info@picqer.com"
+        },
+        {
+            "name": "Sjoerd Rutten",
+            "email": "sjoerd@ray.nl"
         }
     ],
      "keywords": [
@@ -26,7 +30,7 @@
     },
     "minimum-stability": "stable",
     "require": {
-        "illuminate/support": "5.4.*|5.5.*|5.6.*|5.7.*|5.8.*|6.*.*",
+        "illuminate/support": "5.4.*|5.5.*|5.6.*|5.7.*|5.8.*|6.*.*|^7.0",
         "guzzlehttp/guzzle": "~6.0"
     },
     "extra": {
